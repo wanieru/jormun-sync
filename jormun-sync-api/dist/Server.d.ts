@@ -4,6 +4,10 @@ import { IServer } from './IServer';
 export declare class Server implements IServer {
     express: express.Express;
     storage: IStorage;
-    constructor(port: number);
+    private _openSignupSize;
+    private _allowOpenSignup;
+    constructor(port: number, allowOpenSignup: boolean, openSignupSize: number);
+    openSignupSize(): number;
+    allowOpenSignup(): boolean;
     private setupErrorHandlers;
 }

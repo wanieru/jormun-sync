@@ -67,7 +67,7 @@ export class Users extends React.Component<UsersProps, UsersState>
             }
         }
         return <>
-            <Button onClick={() => this.setState({ newUserOpen: this.state.newUserOpen })} className="m-2" color="primary"><Fas plus /> New User</Button>
+            <Button onClick={() => this.setState({ newUserOpen: !this.state.newUserOpen })} className="m-2" color="primary"><Fas plus /> New User</Button>
             {this.state.newUserOpen && <NewUser wrap={this.props.wrap} onNewUser={this.refresh} />}
             <Table>
                 <thead><tr><th>#</th><th><Fas user /> Username</th><th><Fas database /> Storage Used</th><th><Fas user-shield /> Admin</th></tr></thead>

@@ -9,7 +9,11 @@
       ],
       "volumes":[
         "./database:/app/data"
-      ]
+      ],
+      "environment": {
+        "ALLOW_OPEN_SIGNUP": "false"
+        "OPEN_SIGNUP_SIZE": "5"
+      },
     }
   }
 }

@@ -34,8 +34,13 @@ export class Server implements IServer
 {
     public express: express.Express = express.default();
     public storage: IStorage;
-    public constructor(port: number)
+    private _openSignupSize: number;
+    private _allowOpenSignup: boolean;
+    public constructor(port: number, allowOpenSignup: boolean, openSignupSize: number)
     {
+        this._allowOpenSignup = allowOpenSignup;
+        this._openSignupSize = openSignupSize;
+
         this.storage = new Sqlite();
         this.express.use(express.json());
         this.express.listen(port, () => console.log(`Listening on port ${port}`));
@@ -68,6 +73,14 @@ export class Server implements IServer
         Uninvite(this, "/uninvite");
         Unshare(this, "/unshare");
         Users(this, "/users");
+    }
+    openSignupSize(): number
+    {
+        return this._openSignupSize;
+    }
+    allowOpenSignup(): boolean
+    {
+        return this._allowOpenSignup;
     }
     private setupErrorHandlers()
     {
