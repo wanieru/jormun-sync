@@ -1,0 +1,15 @@
+{
+  "version": "3",
+  "services": {
+    "jormun-sync": {
+      "restart" : "always",
+      "image": "wanieru/jormun-sync:latest",
+      "ports": [
+        "5000:5000"
+      ],
+      "volumes":[
+        "./database:/app/data"
+      ]
+    }
+  }
+}

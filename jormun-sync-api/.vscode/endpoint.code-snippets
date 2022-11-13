@@ -1,0 +1,26 @@
+{
+    "Endpoint": {
+        "prefix": [
+            "endpoint"
+        ],
+        "body": [
+            "import { Endpoint } from \"./Endpoint\";",
+            "import {Express} from \"express\";",
+            "import { ${2:endpoint}Request, ${1:Endpoint}Response } from \"jormun-sdk/dist/ApiTypes/${1:Endpoint}\";",
+            "import { IServer } from \"../IServer\";",
+            "",
+            "export function ${1:EndpointName}(server : IServer, endpoint : string)",
+            "{",
+            "\tEndpoint(server.express, endpoint, ${2:endpoint}Request, async (body, req, res) => ",
+            "\t{",
+            "\t\tlet response : ${1:Endpoint}Response = undefined;",
+            "\t\tlet status : number = 200;",
+            "\t\t$0",
+            "\t\t",
+            "\t\t",
+            "\t\treturn {status: status, body: response};",
+            "\t});",
+            "}",
+        ]
+    }
+}

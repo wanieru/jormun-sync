@@ -1,0 +1,34 @@
+{
+    "name": "jormun-sync",
+    "version": "1.0.0",
+    "description": "Sync server for use with jormun-sdk",
+    "main": "dist/index.js",
+    "scripts": {
+        "start": "nodemon dist/index.js",
+        "db": "node dist/debug/PrintDb.js",
+        "build": "tsc",
+        "watch": "tsc --watch"
+    },
+    "dependencies": {
+        "@types/bcryptjs": "^2.4.2",
+        "@types/cors": "^2.8.12",
+        "@types/express": "^4.17.13",
+        "@types/hat": "^0.0.1",
+        "@types/js-sha512": "^0.8.0",
+        "@types/node": "^16.10.2",
+        "@types/sqlite3": "^3.1.7",
+        "bcryptjs": "^2.4.3",
+        "cors": "^2.8.5",
+        "express": "^4.17.1",
+        "hat": "^0.0.3",
+        "jormun-sdk": "git+https://github.com/wanieru/jormun-sdk.git#main",
+        "js-sha512": "^0.8.0",
+        "nodemon": "^2.0.13",
+        "source-map-support": "^0.5.20",
+        "sql-string-escape": "^1.1.6",
+        "sqlite": "^4.0.23",
+        "sqlite3": "^5.0.2",
+        "typescript": "^4.4.3",
+        "zod": "^3.9.1"
+    }
+}

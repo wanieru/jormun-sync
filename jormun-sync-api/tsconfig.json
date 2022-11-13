@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "esModuleInterop": true,
+        "outDir": "dist",
+        "declaration": true,
+        "inlineSourceMap": true,
+        "strict": true,
+        "strictNullChecks": true
+    },
+    "include": [
+        "src/**/*.ts"
+    ]
+}

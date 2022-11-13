@@ -1,0 +1,31 @@
+{
+	"component": {
+		"prefix": "bridge",
+		"body": [
+			"import React from \"react\";\r",
+			"import { BridgeComponent } from '../BridgeComponent';",
+			"\r",
+			"export interface ${1:Component}Props \r",
+			"{\r",
+			"\r",
+			"}\r",
+			"export class ${1:Component}Bridge\r",
+			"{\r",
+			"\r",
+			"}\r",
+			"export class ${1:Component}State \r",
+			"{\r",
+			"\r",
+			"}\r",
+			"\r",
+			"export class ${1:Component} extends BridgeComponent<${1:Component}Props, ${1:Component}State, ${1:Component}Bridge> \r",
+			"{",
+			"    public state = new ${1:Component}State();\r",
+			"    public render = () => \r",
+			"    { \r",
+			"        return <></>;\r",
+			"    }\r",
+			"}"
+		],
+	}
+}

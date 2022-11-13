@@ -1,0 +1,26 @@
+{
+	"component": {
+		"prefix": "comp",
+		"body": [
+			"import React from \"react\";\r",
+			"\r",
+			"export interface ${1:Component}Props \r",
+			"{\r",
+			"\r",
+			"}\r",
+			"export class ${1:Component}State \r",
+			"{\r",
+			"\r",
+			"}\r",
+			"\r",
+			"export class ${1:Component} extends React.Component<${1:Component}Props, ${1:Component}State> \r",
+			"{",
+			"    public state = new ${1:Component}State();\r",
+			"    public render = () => \r",
+			"    { \r",
+			"        return <></>;\r",
+			"    }\r",
+			"}"
+		],
+	}
+}
