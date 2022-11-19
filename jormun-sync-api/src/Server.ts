@@ -29,6 +29,7 @@ import { Logout } from './endpoints/Logout';
 import { Invitation } from './endpoints/Invitation';
 import { Invite } from './endpoints/Invite';
 import { Uninvite } from './endpoints/Uninvite';
+import bodyParser from 'body-parser';
 
 export class Server implements IServer
 {
@@ -42,7 +43,7 @@ export class Server implements IServer
         this._openSignupSize = openSignupSize;
 
         this.storage = new Sqlite();
-        this.express.use(express.json());
+        this.express.use(express.json({ limit: "100mb" }));
         this.express.listen(port, () => console.log(`Listening on port ${port}`));
         this.express.use('/', express.static("public_html"));
         this.express.use('*', express.static("public_html"));
